@@ -1,0 +1,23 @@
+cc_library_shared {
+    name: "libMtkOmxGsmDec",
+    srcs: ["MtkOmxGsmDec.cpp"],
+    header_libs: [
+        "libstagefright_foundation_headers",
+        "mtk_openmax_headers",
+        "mtk_omx_headers",
+    ],
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "libdl",
+        "liblog",
+    ],
+    static_libs: [
+        "libMtkOmxAudioDecBase",
+        "libMtkOmxOsalUtils",
+        "libgsm",
+    ],
+    proprietary: true,
+    owner: "mtk",
+    compile_multilib: "32",
+}

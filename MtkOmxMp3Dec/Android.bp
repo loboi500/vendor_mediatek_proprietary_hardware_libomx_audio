@@ -1,0 +1,23 @@
+cc_library_shared {
+    name: "libMtkOmxMp3Dec",
+    srcs: ["MtkOmxMp3Dec.cpp"],
+    header_libs: [
+        "mtk_openmax_headers",
+        "mtk_omx_headers",
+        "libmp3dec_mtk_headers",
+    ],
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libmp3dec_mtk",
+    ],
+    static_libs: [
+        "libMtkOmxAudioDecBase",
+        "libMtkOmxOsalUtils",
+    ],
+    proprietary: true,
+    owner: "mtk",
+    compile_multilib: "32",
+}

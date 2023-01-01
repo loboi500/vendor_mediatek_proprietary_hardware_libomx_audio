@@ -1,0 +1,26 @@
+cc_library_shared {
+    name: "libMtkOmxAdpcmDec",
+    srcs: [
+        "MtkOmxAdpcmDec.cpp",
+    ],
+    header_libs: [
+        "mtk_openmax_headers",
+        "mtk_omx_headers",
+        "libadpcmdec_mtk_headers",
+    ],
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libadpcmdec_mtk",
+        "libmtk_drvb",
+    ],
+    static_libs: [
+        "libMtkOmxAudioDecBase",
+        "libMtkOmxOsalUtils",
+    ],
+    proprietary: true,
+    owner: "mtk",
+    compile_multilib: "32",
+}

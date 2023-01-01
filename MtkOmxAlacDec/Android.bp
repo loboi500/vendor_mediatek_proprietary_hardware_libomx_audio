@@ -1,0 +1,31 @@
+cc_library_shared {
+    name: "libMtkOmxAlacDec",
+    srcs: [
+        "MtkOmxAlacDec.cpp",
+    ],
+    cflags: [
+        "-DSTATIC_DECLARE=static",
+        "-DSTATIC_ENHANCE",
+        "-DEXTERN=static",
+    ],
+    header_libs: [
+        "mtk_openmax_headers",
+        "mtk_omx_headers",
+        "libalacdec_ffmpeg_headers",
+    ],
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "libdl",
+        "liblog",
+    ],
+    static_libs: [
+        "libMtkOmxAudioDecBase",
+        "libMtkOmxOsalUtils",
+        "libalacdec_ffmpeg",
+    ],
+
+    proprietary: true,
+    owner: "mtk",
+    compile_multilib: "32",
+}

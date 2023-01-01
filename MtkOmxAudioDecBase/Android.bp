@@ -1,0 +1,29 @@
+cc_library_static {
+    name: "libMtkOmxAudioDecBase",
+    product_variables: {
+        eng: {
+            cflags: [
+                "-DCONFIG_MT_ENG_BUILD",
+            ],
+        },
+    },
+    srcs: [
+        "MtkOmxAudioDecBase.cpp",
+    ],
+    export_include_dirs: ["."],
+    header_libs: [
+        "mtk_openmax_headers",
+        "mtk_omx_headers",
+    ],
+    shared_libs: [
+        "libutils",
+        "libcutils",
+        "liblog",
+    ],
+    static_libs: [
+        "libMtkOmxOsalUtils",
+    ],
+    proprietary: true,
+    owner: "mtk",
+    compile_multilib: "32",
+}
