@@ -1,0 +1,8 @@
+MtkOmxAudioDecBase filter=lfs diff=lfs merge=lfs -text
+MtkOmxAudUtil filter=lfs diff=lfs merge=lfs -text
+MtkOmxGsmDec filter=lfs diff=lfs merge=lfs -text
+MtkOmxMp3Dec filter=lfs diff=lfs merge=lfs -text
+MtkBpCodec filter=lfs diff=lfs merge=lfs -text
+MtkOmxAdpcmDec filter=lfs diff=lfs merge=lfs -text
+MtkOmxAlacDec filter=lfs diff=lfs merge=lfs -text
+MtkOmxApeDec filter=lfs diff=lfs merge=lfs -text
